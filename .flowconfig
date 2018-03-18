@@ -1,0 +1,11 @@
+[ignore]
+
+[include]
+
+[lints]
+all=warn
+unclear-type=off
+
+[options]
+include_warnings=true
+esproposal.export_star_as=enable
