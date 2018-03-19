@@ -14,13 +14,13 @@ import {
   WebView,
 } from 'react-native'
 
-export default class A extends Component{
- 
+export default class B extends Component {
+
   render() {
 
     return (
       <View >
-          <Text onPress={()=>console.log("hello aaaaaa")}>hello A</Text>
+        <Text onPress={() => console.log("hello B")}>hello B</Text>
       </View>
     )
   }
