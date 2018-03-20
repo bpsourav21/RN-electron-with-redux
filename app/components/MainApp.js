@@ -1,20 +1,13 @@
-
 import React, { Component } from 'react'
-import {
-    ActivityIndicator,
-    Alert,
-    Clipboard,
-    Linking,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    TouchableWithoutFeedback,
-    View,
-    WebView,
-} from 'react-native'
+import { connect } from 'react-redux';
+import { Link, withRouter } from "react-router-dom";
+//import actions
+
+//import css file
+
+import { View } from 'react-native'
 
 class MainApp extends Component {
-
     render() {
         return (
             <View >
@@ -23,4 +16,9 @@ class MainApp extends Component {
         )
     }
 }
-export default MainApp
+const mapStateToProps = (state) => {
+    return {
+    };
+};
+
+export default withRouter(connect(mapStateToProps)(MainApp));
