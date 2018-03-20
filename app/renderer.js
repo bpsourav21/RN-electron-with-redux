@@ -2,11 +2,10 @@
 
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
-
+import App from './App'
 const root = document.getElementById('app')
 
 const renderApp = () => {
-  const App = require('./App').default
   if (root) render(<App />, root)
 }
 

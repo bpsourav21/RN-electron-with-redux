@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 // import auth from './auth';
 // import notification from './notification';
-// import log from './log';
+ import log from './log';
 //  import nav from './nav';
 // import inventory from './inventory';
 // import order from './order';
@@ -14,7 +14,7 @@ export default combineReducers({
     // reports,
     // auth,
     // notification,
-    // log,
+     log,
     //  nav,
     // settings
 })

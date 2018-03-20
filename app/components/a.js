@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import {
   ActivityIndicator,
   Alert,
@@ -19,8 +20,9 @@ export default class A extends Component{
   render() {
 
     return (
-      <View >
+      <View style={{backgroundColor:"#eef"}}>
           <Text onPress={()=>console.log("hello aaaaaa")}>hello A</Text>
+          <Link to="/b">to Counter</Link>
       </View>
     )
   }
