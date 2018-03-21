@@ -1,17 +1,25 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { Link, withRouter } from "react-router-dom";
+import { View, Dimensions } from 'react-native'
+const window = Dimensions.get('window');
+import Menu from './Menu'
 //import actions
 
 //import css file
 
-import { View } from 'react-native'
+
 
 class MainApp extends Component {
     render() {
         return (
-            <View >
-                {this.props.children}
+            <View style={{ flex: 1, flexDirection: 'row', height: window.height, }} >
+                <View style={{ flex: 1 }} >
+                    <Menu />
+                </View>
+                <View style={{ flex: 3 }} >
+                    {this.props.children}
+                </View>
             </View>
         )
     }
