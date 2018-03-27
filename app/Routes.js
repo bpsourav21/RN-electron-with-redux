@@ -9,7 +9,8 @@ import Table from './components/Table'
 import Items from './components/Items'
 import Reports from './components/Reports'
 import Settings from './components/Settings'
-import Login from './components/Login'
+import Login from './components/auth/Login'
+import Signup from './components/auth/Signup'
 
 
 class Routes extends Component {
@@ -61,6 +62,7 @@ class Routes extends Component {
         <Route path="/items" component={Items} />
         <PrivateRoute path="/table" component={Table} />
         <SkipRoute path="/login" component={Login} />
+        <SkipRoute path="/signup" component={Signup} />
         <Route exact path="/" component={Home} />
 
       </Switch>

@@ -17,8 +17,11 @@ class Login extends Component {
         this.state = {
         };
     }
-    loginButtonPressed(){
+    loginButtonPressed() {
         this.props.history.push("/")
+    }
+    signupButtonPressed() {
+        this.props.history.push("/signup")
     }
     render() {
         return (
@@ -48,8 +51,19 @@ class Login extends Component {
                         <TouchableOpacity
                             activeOpacity={0.7}
                             style={styles.loginbutton}
-                            onPress={()=>this.loginButtonPressed()}>
-                            <Text style={{textAlign: 'center', color:"#fff", padding: 15}}>Login</Text>
+                            onPress={() => this.loginButtonPressed()}>
+                            <Text style={{ textAlign: 'center', color: "#fff", padding: 15 }}>Login</Text>
+                        </TouchableOpacity>
+                    </View >
+                    <View style={{alignItems: "center"}} >
+                    <Text> -------------------- or -------------------- </Text>
+                    </View >
+                    <View style={styles.inputWrapper} >
+                        <TouchableOpacity
+                            activeOpacity={0.7}
+                            style={styles.signupButton}
+                            onPress={() => this.signupButtonPressed()}>
+                            <Text style={{ textAlign: 'center', color: "#fff", padding: 15 }}>Sign Up</Text>
                         </TouchableOpacity>
                     </View >
                 </KeyboardAvoidingView>
@@ -89,6 +103,13 @@ const styles = StyleSheet.create({
         top: 9,
     },
     loginbutton: {
+        //position: 'absolute',
+        backgroundColor: 'green',
+        borderRadius: 10,
+        // height: 30,
+        // width: 100
+    },
+    signupButton: {
         //position: 'absolute',
         backgroundColor: 'blue',
         borderRadius: 10,
