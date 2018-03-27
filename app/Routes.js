@@ -63,7 +63,7 @@ class Routes extends Component {
         <PrivateRoute path="/table" component={Table} />
         <SkipRoute path="/login" component={Login} />
         <SkipRoute path="/signup" component={Signup} />
-        <Route exact path="/" component={Home} />
+        <Route path="/" component={Home} />
 
       </Switch>
     )
